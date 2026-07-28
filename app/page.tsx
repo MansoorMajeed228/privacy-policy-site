@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionNavigation from "./SectionNavigation";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Tiko Alarm",
@@ -84,13 +85,7 @@ export default function PrivacyPolicy() {
       <div className="content-shell">
         <aside className="toc">
           <p>On this page</p>
-          <nav aria-label="Privacy policy sections">
-            {sections.map((section) => (
-              <a key={section.id} href={`#${section.id}`}>
-                {section.label}
-              </a>
-            ))}
-          </nav>
+          <SectionNavigation sections={sections} />
           <div className="privacy-note">
             <span>✓</span>
             <p>

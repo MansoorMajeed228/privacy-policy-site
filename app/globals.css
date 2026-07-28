@@ -225,7 +225,9 @@ h1 span {
 }
 
 .toc nav a:hover,
-.toc nav a:focus-visible {
+.toc nav a:focus-visible,
+.toc nav a.active,
+.toc nav a[aria-current="location"] {
   border-left: 2px solid var(--green);
   color: var(--green-bright);
   margin-left: -1px;
