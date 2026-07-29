@@ -1,122 +1,106 @@
-import type { Metadata } from "next";
-import SectionNavigation from "./SectionNavigation";
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#001c14" />
+    <meta
+      name="description"
+      content="Learn how Tiko Alarm handles alarm data, permissions, app blocking, and your privacy."
+    />
+    <meta property="og:title" content="Privacy Policy | Tiko Alarm" />
+    <meta
+      property="og:description"
+      content="Your mornings are personal. Your data should be too."
+    />
+    <meta property="og:image" content="assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/navigation.js" defer></script>
+    <title>Privacy Policy | Tiko Alarm</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Tiko Alarm home">
+        <img src="assets/tiko-logo.png" alt="Tiko Alarm" />
+      </a>
+      <a class="header-link" href="#contact">Privacy help</a>
+    </header>
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Tiko Alarm",
-  description:
-    "Learn how Tiko Alarm handles alarm data, permissions, app blocking, and your privacy.",
-};
-
-const sections = [
-  { id: "overview", label: "Overview" },
-  { id: "data", label: "Data we use" },
-  { id: "permissions", label: "Permissions" },
-  { id: "sharing", label: "Sharing" },
-  { id: "choices", label: "Your choices" },
-  { id: "children", label: "Children" },
-  { id: "updates", label: "Updates" },
-  { id: "contact", label: "Contact" },
-];
-
-const permissions = [
-  {
-    icon: "⏰",
-    title: "Alarms & notifications",
-    text: "Used to schedule alarms, show reminders, play alarm sounds, and display alarm controls—even when the app is not open.",
-  },
-  {
-    icon: "🏃",
-    title: "Motion & activity",
-    text: "Used only when you choose a mission or feature that needs step or motion information.",
-  },
-  {
-    icon: "🛡",
-    title: "Screen Time & app blocking",
-    text: "If you enable Snooze Penalty, Tiko uses iOS Screen Time or Android Accessibility access to block only the apps you select for the interval you choose.",
-  },
-  {
-    icon: "📷",
-    title: "Camera",
-    text: "Used only when you choose a QR or barcode mission. Camera images are processed for the mission and are not stored by Tiko.",
-  },
-];
-
-export default function PrivacyPolicy() {
-  return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Tiko Alarm home">
-          <img src="/tiko-logo.png" alt="Tiko Alarm" />
-        </a>
-        <a className="header-link" href="#contact">
-          Privacy help
-        </a>
-      </header>
-
-      <section className="hero" id="top">
-        <div className="hero-glow" aria-hidden="true" />
-        <div className="hero-copy">
-          <div className="eyebrow">
-            <span className="status-dot" />
+      <section class="hero" id="top">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
             Privacy, made simple
           </div>
           <h1>
             Your mornings are personal.
-            <span> Your data should be too.</span>
+            <span>Your data should be too.</span>
           </h1>
-          <p className="hero-intro">
+          <p class="hero-intro">
             Tiko Alarm is designed to work primarily on your device. This
             policy explains what information the app uses, why permissions are
             requested, and the choices you control.
           </p>
-          <div className="updated">Last updated: July 29, 2026</div>
+          <div class="updated">Last updated: July 29, 2026</div>
         </div>
-        <div className="mascot-wrap">
-          <div className="mascot-orbit orbit-one" />
-          <div className="mascot-orbit orbit-two" />
+        <div class="mascot-wrap">
+          <div class="mascot-orbit orbit-one" aria-hidden="true"></div>
+          <div class="mascot-orbit orbit-two" aria-hidden="true"></div>
           <img
-            className="mascot"
-            src="/tiko-mascot.png"
+            class="mascot"
+            src="assets/tiko-mascot.png"
             alt="Tiko, the friendly alarm clock mascot"
           />
         </div>
       </section>
 
-      <div className="content-shell">
-        <aside className="toc">
+      <div class="content-shell">
+        <aside class="toc">
           <p>On this page</p>
-          <SectionNavigation sections={sections} />
-          <div className="privacy-note">
+          <nav aria-label="Privacy policy sections">
+            <a class="active" aria-current="location" href="#overview">Overview</a>
+            <a href="#data">Data we use</a>
+            <a href="#permissions">Permissions</a>
+            <a href="#sharing">Sharing</a>
+            <a href="#choices">Your choices</a>
+            <a href="#children">Children</a>
+            <a href="#updates">Updates</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <div class="privacy-note">
             <span>✓</span>
             <p>
-              <strong>No selling data.</strong>
-              <br />
+              <strong>No selling data.</strong><br />
               No third-party advertising profiles.
             </p>
           </div>
         </aside>
 
-        <article className="policy">
+        <article class="policy">
           <section id="overview">
-            <div className="section-label">01 · Overview</div>
+            <div class="section-label">01 · Overview</div>
             <h2>Privacy at a glance</h2>
             <p>
               Tiko Alarm helps you create alarms, complete wake-up missions,
               receive reminders, and optionally discourage snoozing by
               temporarily blocking apps you choose.
             </p>
-            <div className="summary-grid">
-              <div className="summary-card">
+            <div class="summary-grid">
+              <div class="summary-card">
                 <span>⌁</span>
                 <h3>Local by design</h3>
                 <p>Alarm settings and preferences are stored on your device.</p>
               </div>
-              <div className="summary-card">
+              <div class="summary-card">
                 <span>◎</span>
                 <h3>You stay in control</h3>
                 <p>Optional permissions can be changed in device settings.</p>
               </div>
-              <div className="summary-card">
+              <div class="summary-card">
                 <span>♢</span>
                 <h3>No data sales</h3>
                 <p>We do not sell or rent your personal information.</p>
@@ -125,13 +109,13 @@ export default function PrivacyPolicy() {
           </section>
 
           <section id="data">
-            <div className="section-label">02 · Data we use</div>
+            <div class="section-label">02 · Data we use</div>
             <h2>Information handled by Tiko</h2>
             <p>
               The app may process the following information to provide the
               features you choose:
             </p>
-            <ul className="check-list">
+            <ul class="check-list">
               <li>
                 <span>✓</span>
                 <div>
@@ -173,7 +157,7 @@ export default function PrivacyPolicy() {
                 </div>
               </li>
             </ul>
-            <div className="callout">
+            <div class="callout">
               <span>🔒</span>
               <p>
                 <strong>No account is required.</strong> Tiko does not currently
@@ -184,28 +168,61 @@ export default function PrivacyPolicy() {
           </section>
 
           <section id="permissions">
-            <div className="section-label">03 · Permissions</div>
+            <div class="section-label">03 · Permissions</div>
             <h2>Why Tiko asks for access</h2>
             <p>
               Tiko requests access only when it supports a feature. You can
               decline optional permissions, although the related feature may
               not work.
             </p>
-            <div className="permission-list">
-              {permissions.map((permission) => (
-                <div className="permission-row" key={permission.title}>
-                  <span className="permission-icon">{permission.icon}</span>
-                  <div>
-                    <h3>{permission.title}</h3>
-                    <p>{permission.text}</p>
-                  </div>
+            <div class="permission-list">
+              <div class="permission-row">
+                <span class="permission-icon">⏰</span>
+                <div>
+                  <h3>Alarms &amp; notifications</h3>
+                  <p>
+                    Used to schedule alarms, show reminders, play alarm sounds,
+                    and display alarm controls—even when the app is not open.
+                  </p>
                 </div>
-              ))}
+              </div>
+              <div class="permission-row">
+                <span class="permission-icon">🏃</span>
+                <div>
+                  <h3>Motion &amp; activity</h3>
+                  <p>
+                    Used only when you choose a mission or feature that needs
+                    step or motion information.
+                  </p>
+                </div>
+              </div>
+              <div class="permission-row">
+                <span class="permission-icon">🛡</span>
+                <div>
+                  <h3>Screen Time &amp; app blocking</h3>
+                  <p>
+                    If you enable Snooze Penalty, Tiko uses iOS Screen Time or
+                    Android Accessibility access to block only the apps you
+                    select for the interval you choose.
+                  </p>
+                </div>
+              </div>
+              <div class="permission-row">
+                <span class="permission-icon">📷</span>
+                <div>
+                  <h3>Camera</h3>
+                  <p>
+                    Used only when you choose a QR or barcode mission. Camera
+                    images are processed for the mission and are not stored by
+                    Tiko.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
           <section id="sharing">
-            <div className="section-label">04 · Sharing</div>
+            <div class="section-label">04 · Sharing</div>
             <h2>We do not sell your information</h2>
             <p>
               Tiko does not sell or rent personal information. The current app
@@ -228,9 +245,9 @@ export default function PrivacyPolicy() {
           </section>
 
           <section id="choices">
-            <div className="section-label">05 · Your choices</div>
+            <div class="section-label">05 · Your choices</div>
             <h2>You control your data and permissions</h2>
-            <div className="choice-grid">
+            <div class="choice-grid">
               <div>
                 <strong>Change permissions</strong>
                 <p>
@@ -264,7 +281,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section id="children">
-            <div className="section-label">06 · Children</div>
+            <div class="section-label">06 · Children</div>
             <h2>Children’s privacy</h2>
             <p>
               Tiko Alarm is a general-audience productivity app and is not
@@ -276,7 +293,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section id="updates">
-            <div className="section-label">07 · Updates</div>
+            <div class="section-label">07 · Updates</div>
             <h2>Changes to this policy</h2>
             <p>
               We may update this policy when Tiko’s features or legal
@@ -286,9 +303,9 @@ export default function PrivacyPolicy() {
             </p>
           </section>
 
-          <section id="contact" className="contact-section">
+          <section id="contact" class="contact-section">
             <div>
-              <div className="section-label">08 · Contact</div>
+              <div class="section-label">08 · Contact</div>
               <h2>Questions about privacy?</h2>
               <p>
                 Contact the Tiko Alarm developer using the support details on
@@ -297,16 +314,16 @@ export default function PrivacyPolicy() {
                 promptly.
               </p>
             </div>
-            <img src="/tiko-mascot.png" alt="" aria-hidden="true" />
+            <img src="assets/tiko-mascot.png" alt="" aria-hidden="true" />
           </section>
         </article>
       </div>
-
-      <footer>
-        <img src="/tiko-logo.png" alt="Tiko Alarm" />
-        <p>Wake up on time. Keep your data yours.</p>
-        <a href="#top">Back to top ↑</a>
-      </footer>
     </main>
-  );
-}
+
+    <footer>
+      <img src="assets/tiko-logo.png" alt="Tiko Alarm" />
+      <p>Wake up on time. Keep your data yours.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
