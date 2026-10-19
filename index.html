@@ -45,7 +45,7 @@
             policy explains what information the app uses, why permissions are
             requested, and the choices you control.
           </p>
-          <div class="updated">Last updated: July 29, 2026</div>
+          <div class="updated">Last updated: October 19, 2026</div>
         </div>
         <div class="mascot-wrap">
           <div class="mascot-orbit orbit-one" aria-hidden="true"></div>
@@ -64,6 +64,7 @@
           <nav aria-label="Privacy policy sections">
             <a class="active" aria-current="location" href="#overview">Overview</a>
             <a href="#data">Data we use</a>
+            <a href="#face-data">Face Match data</a>
             <a href="#permissions">Permissions</a>
             <a href="#sharing">Sharing</a>
             <a href="#choices">Your choices</a>
@@ -156,6 +157,20 @@
                   </p>
                 </div>
               </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Usage analytics and crash reports</strong>
+                  <p>
+                    Screens viewed, features used (such as alarm and mission
+                    settings, snoozes, and purchase attempts), app version,
+                    device model, operating system, and crash diagnostics. These
+                    are tied to a random app-instance identifier, not to your
+                    name or contact details, and advertising identifiers are not
+                    collected.
+                  </p>
+                </div>
+              </li>
             </ul>
             <div class="callout">
               <span>🔒</span>
@@ -167,8 +182,98 @@
             </div>
           </section>
 
+          <section id="face-data">
+            <div class="section-label">03 · Face Match data</div>
+            <h2>How Face Match handles face data</h2>
+            <p>
+              Face Match is an optional mission. It is used only if you choose
+              it, and the camera is used only after you grant permission. Face
+              Match works entirely on your device: face data is never sent to
+              us, to our servers, or to any third party.
+            </p>
+            <ul class="check-list">
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>What face data is collected</strong>
+                  <p>
+                    When you capture a face, Tiko creates a face signature: a
+                    list of 128 numbers calculated on your device by a face
+                    recognition model built into the app. Tiko also saves the
+                    name you type for that face and a small (320 × 320 pixel)
+                    portrait photo, which is only shown in the saved-faces list
+                    so you can tell faces apart. While a Face Match mission is
+                    running, camera frames are analyzed on the device to
+                    calculate a signature and are deleted right after analysis.
+                    Tiko does not collect Face ID data or any other biometric
+                    data from the system.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>How face data is used</strong>
+                  <p>
+                    Face data is used only to check whether the face in front of
+                    the camera matches a face you saved, so the alarm can be
+                    dismissed. It is not used to identify people, for
+                    advertising, for analytics, for profiling, or to train any
+                    model, and it is not used for any other purpose.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Where face data is stored</strong>
+                  <p>
+                    Only on your device. Face signatures and names are stored
+                    encrypted in the iOS Keychain (Android Keystore-backed
+                    encrypted storage on Android), set to “this device only”,
+                    so they are not synced to iCloud or copied to other
+                    devices. Portraits are stored in the app’s private storage
+                    on the device. Because portraits are ordinary app files,
+                    they may be included in your own encrypted device backup;
+                    if a backup is restored to a device, Tiko deletes those
+                    portraits because their signatures were not restored.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Sharing</strong>
+                  <p>
+                    Face data is not shared with anyone. No face signatures,
+                    portraits, face names or camera images are uploaded, sent to
+                    Firebase Analytics, Firebase Crashlytics or RevenueCat, or
+                    disclosed to any third party. Face detection and recognition
+                    run on the device using Apple’s on-device Vision framework
+                    (Google ML Kit on Android) and the built-in recognition
+                    model, without a network connection.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>✓</span>
+                <div>
+                  <strong>Retention and deletion</strong>
+                  <p>
+                    A saved face is kept on your device until you delete it.
+                    You can delete a face at any time by holding it in the
+                    saved-faces list; this immediately and permanently deletes
+                    its signature, name and portrait. Mission camera frames are not
+                    retained at all. We recommend deleting saved faces in the
+                    app before uninstalling it.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
           <section id="permissions">
-            <div class="section-label">03 · Permissions</div>
+            <div class="section-label">04 · Permissions</div>
             <h2>Why Tiko asks for access</h2>
             <p>
               Tiko requests access only when it supports a feature. You can
@@ -212,9 +317,11 @@
                 <div>
                   <h3>Camera</h3>
                   <p>
-                    Used only when you choose a QR or barcode mission. Camera
-                    images are processed for the mission and are not stored by
-                    Tiko.
+                    Used only for missions and features you choose, such as
+                    Face Match, photo, push-up and squat missions, QR and
+                    barcode scanning, and the flashlight. Camera frames are
+                    analyzed on your device and are not uploaded. Face Match is
+                    described in detail in the “Face Match data” section.
                   </p>
                 </div>
               </div>
@@ -222,12 +329,19 @@
           </section>
 
           <section id="sharing">
-            <div class="section-label">04 · Sharing</div>
+            <div class="section-label">05 · Sharing</div>
             <h2>We do not sell your information</h2>
             <p>
-              Tiko does not sell or rent personal information. The current app
-              does not use third-party advertising or behavioral-tracking
-              services.
+              Tiko does not sell or rent personal information and does not use
+              third-party advertising services or advertising identifiers.
+            </p>
+            <p>
+              Tiko uses Google Firebase Analytics and Firebase Crashlytics to
+              understand which features are used and to find and fix crashes.
+              Google processes this information for us under its own terms. An
+              anonymous customer identifier from RevenueCat, which manages
+              in-app purchases, may be attached so a crash or purchase problem
+              can be matched to a support request.
             </p>
             <p>
               Information may be handled by Apple, Google, or your device
@@ -245,7 +359,7 @@
           </section>
 
           <section id="choices">
-            <div class="section-label">05 · Your choices</div>
+            <div class="section-label">06 · Your choices</div>
             <h2>You control your data and permissions</h2>
             <div class="choice-grid">
               <div>
@@ -258,7 +372,8 @@
               <div>
                 <strong>Remove alarm data</strong>
                 <p>
-                  Delete individual alarms in Tiko. Removing the app also
+                  Delete individual alarms in Tiko. Delete a saved face by
+                  holding it in the Face Match saved-faces list. Removing the app also
                   removes locally stored app data, subject to your device
                   backup settings.
                 </p>
@@ -281,7 +396,7 @@
           </section>
 
           <section id="children">
-            <div class="section-label">06 · Children</div>
+            <div class="section-label">07 · Children</div>
             <h2>Children’s privacy</h2>
             <p>
               Tiko Alarm is a general-audience productivity app and is not
@@ -293,7 +408,7 @@
           </section>
 
           <section id="updates">
-            <div class="section-label">07 · Updates</div>
+            <div class="section-label">08 · Updates</div>
             <h2>Changes to this policy</h2>
             <p>
               We may update this policy when Tiko’s features or legal
@@ -305,7 +420,7 @@
 
           <section id="contact" class="contact-section">
             <div>
-              <div class="section-label">08 · Contact</div>
+              <div class="section-label">09 · Contact</div>
               <h2>Questions about privacy?</h2>
               <p>
                 Contact the Tiko Alarm developer using the support details on
